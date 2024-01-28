@@ -1,0 +1,39 @@
+/* 
+-> Browsers renders css runs sequentially i.e. if we try to overlap css, we will get the last (closest one) css executed.
+
+-> There is no priority like things.
+
+-> In css there is concept of specificity (priority order) that means css on elements selectors will be overwritten by class selectors' css.
+    We can also check specificity of selectors on https://specificity.keegan.st/ 
+
+-> There is a universal css selector to apply the css on the whole contents. It literally selects all elements of the html. CSS on the universal selectors will be applied to each elements individually. 
+    The following css will kept border on each element in the html
+*{
+    border: 3px solid black;
+}
+
+-> However elements present inside of body, inherits only those css which are suitable(relevant) to them or available to inherit. 
+    The following css will kept border only on body because only 'Typography' can be inherited (css related with text styling and so on..) .
+* {
+    border:3px solid black;
+}
+
+-> Form elements do not inherit fonts implicitly
+
+-> CSS have three parts selectors, property and property value.
+
+-> We can apply css by selecting elements, classes, ids, nested elements (without comma), grouped elements(with comma).
+
+-> If we select element, the css will be applied to all the inherited elements 
+
+-> Property and its value are simultaneously known as declaration.
+
+-> We can check the validity of css on https://jigsaw.w3.org/css-validator/ by uploading the css file
+
+*/
+
+/* universal selectors */
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+}

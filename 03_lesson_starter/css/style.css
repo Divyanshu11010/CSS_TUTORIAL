@@ -1,0 +1,22 @@
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #ffefd5;
+    color: rgb(0, 0, 0);
+}
+
+p {
+
+    /* color: rgba(0, 0 , 0, 0.5); */
+    /* color: #ffffff; */
+    /* color: hsl(0, 94%, 75%); */
+    color: #333;
+}
+
+/* 
+-> Color picker website : https://coolors.co/  
+-> To check color contrast : https://webaim.org/resources/contrastchecker/ 
+*/
+
+ 
