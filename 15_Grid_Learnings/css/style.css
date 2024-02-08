@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+.box {
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.container{
+  
+  /*
+  ->	grid value of display property keep the elements inside a grid.
+  */
+  display: grid;
+  
+  /*
+  ->	This is auto flow of grid. It will define width, no of columns and more parameters automatically.
+  */
+  /* grid-auto-flow: column; */
+  
+  /*
+  ->	we can set our own template for grid (column/row)
+  ->  Setting up two columns each of 200px width
+  */
+  /* grid-template-columns: 200px 200px; */
+  
+  /*
+  ->	We generally use fr ( fraction ) unit in grids.
+  ->  repeat(2, 1fr, 2fr) : it means 4 columns are of 1fr 1fr 1fr 1fr width
+  */
+  grid-template-columns: repeat(4, 1fr);
+  
+  /*
+  ->	minmax() : it takes two values, first one is minimum value of height of rows, 2nd is auto that will manage the height of rows whenever there is any available space present in the container.
+  */
+  grid-template-rows: minmax(150px, auto);
+  
+  /*
+  ->	We could define gaps between rows and columns
+  */
+  gap: 1em 1em;
+}
+
+.box:first-child{
+  background-color: aqua;
+  color: #333;
+  
+  /*
+  ->	This makes the element to cover column/row lines start from 1 to end at 4.
+  */
+  grid-column-start: 1;
+  grid-column-end: 4;
+  
+  /*
+  ->	short hand for above two lines
+  */
+  /* grid-column: 1/4; */
+  grid-row-start: 1;
+  grid-row-end: 3; 
+
+  /*
+  ->	On the display property, we can use align-content/justify-content
+  */
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  /* shorthand for the above two lines */
+  place-content: center;
+}
+
+
+
+
+/* Here is hands on practice : https://cssgridgarden.com/ */

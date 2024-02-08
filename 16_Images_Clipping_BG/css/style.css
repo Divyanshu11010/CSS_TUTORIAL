@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background-color: aliceblue;
+
+  /*
+  ->	Doing linear-gradient background
+  */
+  /* background-image: url("../img/bubbles.png"), linear-gradient(to left, steelblue, aliceblue);
+  background-repeat: repeat-y, no-repeat;
+  background-position: right, center; */
+}
+
+.container {
+  background-color: bisque;
+  background-image: url("../img/scenic-2200x1331.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /*
+  ->	The background position give us power to move (position) background image.
+  */
+  /* background-position: top center; */
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  border: 3px solid black;
+  background-color: hsla(0, 6%, 76%, 0.356);
+  /* background-color: bisque;
+  background-image: url("../img/scenic-2200x1331.png");
+  background-repeat: no-repeat; */
+
+  /*
+  ->	The cover will fill the background with max size of image
+  */
+  /* background-size: cover; */
+
+  /*
+  ->	The contain will make the background size to contain the complete image whether the background will filled or not 
+  */
+  /* background-size: contain; */
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px whitesmoke;
+  /* background-color: hsla(0, 6%, 76%, 0.356); */
+  padding: 1rem;
+  margin-right: 3rem;
+  border-radius: 2rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+/*
+->	Images are inline elements not block elements, that's why when we put border around them there will be a white space between image and the border line them just like paragraphs.
+*/
+img {
+  display: block;
+}
+
+
+.profile-pic-figure {
+  width: 35%;
+  height: auto;
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 4px double #333;
+  border-radius: 50%;
+}
+
+
+/*
+->	To clip the background with texts
+*/
+/* .clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url("../img/scenic-2200x1331.png");
+  background-size: 100%;
+  text-transform: uppercase;
+
+  webkit is a prefix supported by chrome
+  -webkit-background-clip: text;
+  color: transparent;
+} */

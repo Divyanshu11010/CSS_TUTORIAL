@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: hsl(200, 100%, 68%);
+}
+
+/*
+->  To make changes based on the state of the links we can apply different css on links.
+->  For doing above thing we can use pseudo class.
+->  Pseudo class is nothing but classes that are defined by default for different states of any element.
+*/
+
+
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus{
+    color: hsl(180, 100%, 68%);
+
+    /* We can also do change opacity */
+    /* opacity: 0.4; */
+    /* background-color: yellow; */
+}
+
+a:active{
+    color: red;
+}

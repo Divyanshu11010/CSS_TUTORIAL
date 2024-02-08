@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+/*
+->	It makes the scrolling of the page smooth so that the user can see the scroll
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: greenyellow;
+}
+
+header {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.5rem;
+  position: sticky;
+  bottom: 0;
+  background-color: #333;
+  color: blanchedalmond;
+}
+
+a, a:visited {
+  color: blanchedalmond;
+}
+
+.social{
+  position: fixed;
+  top: 92vh;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  background-color: #333;
+}

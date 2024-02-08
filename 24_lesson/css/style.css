@@ -102,7 +102,7 @@ html {
 }
 
 body {
-    background-color: var(--BODY-BGCOLOR);
+    /* background-color: var(--BODY-BGCOLOR); */
     color: var(--FONT-COLOR);
     min-height: 100vh;
     max-width: 800px;

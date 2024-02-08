@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+->	There is a css property named 'display' to control the appearance of the page. It can have mainly three property values none, block, inline, block.
+-> none : It makes the element disappeared from the page.
+-> inline : It only takes needed space i.e. does not takes full width of the page. 
+-> block : It takes complete width of the page.
+-> inline-block : It is hybrid of inline and block. In it the contents are inline blocked. It is like blocked elements present in one line.
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  text-align: right;
+  background-color: #333;
+  font-family: "Roboto" sans-serif;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+li a:focus,
+li a:hover {
+  opacity: 0.8;
+}

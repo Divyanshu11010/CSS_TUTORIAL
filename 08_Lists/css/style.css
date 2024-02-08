@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}
+
+ul {
+  list-style-type: square;
+
+  /*
+  ->	If we align list items, the points will not be affected.
+  ->  To shift them too we have to position the points inside
+  */
+  text-align: center;
+  list-style-position: inside;
+
+  /*
+  ->	To add images as a points in and list.
+  */
+  list-style-image: url("../images/checkmark.png");
+
+  /*
+  ->	There is also short hand 
+  */
+  /* list-style: square url("../images/checkmark.png") inside; */
+}
+
+
+/*
+->	There are pseudo elements also, they starts with ::
+->  'marker' is a pseudo element used to control points in a list
+*/
+::marker{
+  color: blue;
+}

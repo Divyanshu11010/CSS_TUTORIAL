@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.block{
+  width: 30vw;
+  height: 30vh;
+  background-color: aqua;
+  padding: 0.5rem;
+  /*
+  ->	To make elements/images to be wrapped around text (paragraph).
+  */
+  float: left;
+}
+
+.left{
+  /*
+  ->	to create margin just right after the Float
+  */
+  margin-right: 0.5rem;
+}
+
+/*
+->	To keep just one paragraph wrapper, we need to add empty block element and then we have apply the following css.
+*/
+/* .clear{
+  clear: both;
+} */
+
+section{
+  border: 3px solid red;
+  
+  /*
+  ->	This is the soo powerful property which used to display floating element perfectly so that the size of the parent element do not vary with elements other than floating, it should vary with size of floating element.
+  ->  That means if we remove the flow-root property the height of section will vary with according to amount of text present in the section element.
+  */
+  display: flow-root;
+}
+
+

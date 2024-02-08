@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 70vh;
+  margin: 50px auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+
+.absolute {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  color: #333;
+
+  /*
+  ->	The 'position' property is used to position the elements. Is default value is 'static'
+  ->  Value 'absolute' : Using it we can position elements at any point from the border of its ancestor element(relative). If there is no relative ancestor element is present the screen of the browsers will be relative element and the defined position will be relative the screen.
+  ->  If we set outer box as relative element this aqua color box will be set at the corner of the outer box
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.relative {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  color: #333;
+
+  /*
+  ->	Value 'relative' : It is just like absolute with its relative parent element.
+  ->  We need not to define relative ancestor explicitly for it, its parent element is always relative.
+  */
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
+
+.fixed {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  color: #333;
+
+  /*
+  ->	Value 'fixed' : It is fixed with relative to the browsers window.
+  ->  Even if we scroll the page the fixed element will never be scrolled.
+  */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.sticky {
+  width: 150px;
+  height: 150px;
+  background-color: goldenrod;
+  color: #333;
+
+  /*
+  ->	Value 'sticky' : The element having this position will stick from the sides of the screen when we scroll, it will be scrolled out when the container's height or width will be over in which it is kept.
+  */
+  position: sticky;
+  top: 0px;
+  left: 0px;
+}

@@ -1,0 +1,50 @@
+/* 
+-> We should think before using hard coded font size in css because the clients' browsers will handle according to its own settings.
+
+-> There are many types of units and sizes such as px, pt, %, ... for doing css work.
+
+-> 1px = 1/96 times an inch
+
+-> % is relative unit. It is defined as percentage of parent size.
+
+-> vw is also relative unit. It is just like percentage unit but the slight difference is that it is viewable width however percentage represents the % amount of its parents size
+
+-> rem is also a relative unit. 1rem = 1 * (font size of root(html) which is generally 16px).
+
+-> em is also a relative unit. 1em = 1 * (font size of nearest parent element or the element itself).
+ */
+
+/* It is used to remove default margins and padding which browser adds */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 100vh means the full page which is viewable will be body's min height */
+    min-height: 100vh;
+}
+
+h1 {
+    border: 3px dotted red;
+    /* half of parent width */
+    width: 50%;
+    font-size: 3rem;
+    padding: 0.5em;
+}
+
+main {
+    /* this will be 32px */
+    font-size: 2rem;
+}
+
+p {
+    /* the font will be of 32px */
+    font-size: 2rem;
+
+    /* the font will be of 64px */
+    /* font-size: 2em; */
+
+
+}

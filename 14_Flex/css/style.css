@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*
+->	Link to the tutorial : https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+
+  /*
+  ->	The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space available in its flex container.
+  ->  By default the direction of flex is row, we set it as column.
+  ->  Direction of flex is known as main axis and its perpendicular direction is known as cross axis.
+  ->  Using its different properties we can set items in a container to use the container space efficiently
+  */
+  display: flex;
+  gap: 2rem;
+
+  /*
+  ->	It sets the flex items at the end of line ( right side of the container )
+  ->  justify-content property is used to grow or shrink flex items on main axis.
+  */
+  justify-content: end;
+
+  /*
+  ->	set equal space between flex items
+  */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+
+  /*
+  ->  align always works on cross axis.
+  ->	align-items : used for alignment on cross-axis
+  ->  It is used to control how the flex items will be aligned i.e. it does not control the spacing between flex items.
+  */
+  align-items: center;
+  flex-direction: column;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+
+  /*
+  ->	To wrap flex items according to the size of the screen.
+  */
+  flex-wrap: wrap;
+
+  /*
+  ->	Short-hand for direction and wrap is :
+  */
+  /* flex-flow: column wrap; */
+
+  /*
+  ->  It is just like justify-content but on cross axis.
+  ->  It controls spacing between flex items.
+  */
+  align-content: center;
+}
+
+.box {
+  /* min-width: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  /*
+  ->	The below three lines are used to center flex items in the center of the flex container
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*
+  ->	The flex-grow controls how the flex items will grow to fill the container's space.
+  ->  it takes numerical values that represents how much growing will happen to each of the flex items.
+  ->  The shrink is same as grow. 
+  */
+  flex-grow: 1;
+
+  /*
+  ->	The flex-basis sets min-width for the flex items
+  ->  When we starts to grow the flex items it will starts to grow from flex-basis value
+  ->  When we starts to shrink the flex items it will starts to shrink from flex-basis value
+  */
+  flex-basis: 100px;
+
+  /*
+  ->	There is shorthand also : flex: grow_value shrink_value flex-basis
+  */
+  flex: 1 1 250px;
+}
+
+/*
+->	the 2nd element will grow more than the first element
+*/
+.box:nth-child(2) {
+  flex-grow: 2;
+
+  /*
+  ->	The order property helps us to change the order of the flex items.
+  ->  its values are same as z-index i.e. higher values goes to last position, lowest values goes at first position.
+  ->  The default value for all the flex items is 0.
+  */
+  order: -1;
+}
+
+/* here is hands on : https://flexboxfroggy.com/ */

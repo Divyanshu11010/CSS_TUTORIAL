@@ -1,0 +1,72 @@
+/* 
+-> In css everything is a represented in boxes i.e. CSS uses box model of each and every elements 
+-> Each box have three measures which are Margin-Border-Padding-Content. Note : Margin is outside of the border-box. 
+-> Since the margin is present outside of the border it will not be included in the border-sizing 
+-> 
+*/
+
+/* to reset all default css of the browsers we use wild card css as following */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* 
+    -> Here box-sizing property defines which type of box-sizing we are using, is it border-box or content box
+    -> border-box : it includes border and padding too as box size i.e. box-size = border + padding + content-size
+    -> content-box : it only takes content size as box size i.e. box-size = content size
+    -> We can see the computed box size parameters in inspect section of the browser
+    */
+    box-sizing: border-box;
+}
+
+h1 {
+    /* border: 2px dashed red; */
+    
+    /*
+    ->	We are setting the width of h1 heading 400px, since box-sizing is border-box, border, padding will also be included in 400px
+    -> Let if there is content-box box-sizing is given we will get the content as 400px and borders, padding will be excluded from 400px
+    */
+    /* width: 400px; 
+    font-size: 3rem;
+    padding: 0.5em; */
+}
+
+.container{
+    border: 3px solid red;
+    
+    /*
+    ->  The order of margin/padding setting is : top-right-bottom-left.
+    ->  If there is only two parameters in margin, the first will be top-bottom and the second will be left-right.
+    ->  Even we can apply this on borders too i.e. we can control each side of border
+    ->  There is auto keyword which is used to give equal margin for all the sides 
+    */
+    margin: 1.5rem 2rem 1.5rem 2rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    
+    /*
+    ->	To create outline just outside of the border
+    */
+    outline: 2px solid purple;
+    
+    /*
+    ->	If we want to keep outline with some offset from border we can use outline-offset property.
+    ->  Positive offset : offset outside of the border
+    ->  Negative offset : offset inside of the border
+    */
+    outline-offset: 1px;
+}
+
+.circle{
+    margin: 2rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 4px solid red;
+    outline: 2px solid black;
+    outline-offset: 0.1rem;
+    
+    /*
+    ->	to make circle we use 50px radius
+    */
+    border-radius: 50px
+}

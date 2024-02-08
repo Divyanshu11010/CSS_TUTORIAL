@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+
+.Columns {
+  /* column-count: 4;
+  column-width: 200px; */
+
+  /*
+  ->	There is a shorthand for the above thing
+  */
+  columns: 4 200px;
+  column-rule: 3px solid red;
+}
+
+p {
+  margin-top: 0.5rem;
+}
+
+h2 {
+  margin: 0;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 2rem;
+  
+  /*
+  ->	controls the break of columns -
+  ->  break-inside: avoid; : this avoids the break of elements' paddings
+  ->  break-before: column; : This breaks the columns and keep the element at top of the columns
+  */
+  break-inside: avoid;
+  break-before: column;
+}
+
+.quote {
+  font-size: 2rem;
+  color: #333;
+  background-color: whitesmoke;
+  column-span: all;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.nowrap{
+  
+  /*
+  ->	This is used to avoid wrapping(extra contents goes in new line whenever the screen is not large enough to accommodate the content) of elements' contents.
+  ->  After applying this css the whole content will go in new line, not its parts
+  */
+  white-space: nowrap;
+}

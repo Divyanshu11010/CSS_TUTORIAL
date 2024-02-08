@@ -1,0 +1,28 @@
+/*
+->	Typography : It is the way that text is arranged and presented
+->  we can import(by linking or importing) fonts from external links also
+*/
+
+body {
+    padding: 10%;
+    font-size: 1.2rem;
+}
+
+input,
+button {
+    /* the font is inherited from its parent element that is body */
+    /* font: inherit; */
+}
+
+/* p {
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    // It makes same number of letters in each line
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    word-spacing: 0.4em;
+
+} */
